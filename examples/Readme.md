@@ -1,6 +1,6 @@
 # Example Environments
 
-Uniton comes with pre-built example environments that automatically download if they are instantiated.
+Uniton comes with pre-built example environments that automatically download when they are first used.
 
 
 ### Empty
@@ -18,8 +18,19 @@ ue = uniton.examples.Kart()
 ```
 
 ### Temple
-The kart game from the demo video.
+![img_3.png](img_3.png)
+
 ```python
 import uniton
 ue = uniton.examples.Temple()
+```
+
+
+
+
+### Flooded Grounds
+![img.png](img.png)
+```python
+import uniton
+ue = uniton.examples.FloodedGrounds()
 ```

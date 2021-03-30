@@ -11,7 +11,7 @@ Uniton lets you control the Unity game engine from Python. It aims to instrument
 <img src="res/screenshot1.png" width=49% style="padding: 0%;"/>
 <a href="https://youtu.be/7BHYa1Ycb-A"><img src="res/yt_thumbnail.png" width=49% style="padding: 0%;"/></a>
 </p>
-<br>
+
 
 ### Quick Start
 ```bash
@@ -19,7 +19,7 @@ pip install uniton
 ```
 ```python
 import uniton
-# download and launch game from the demo video
+# launch game from the demo video
 ue = uniton.examples.Kart()
 # for more check the 'Usage' section
 ```
@@ -51,25 +51,36 @@ ue = uniton.examples.Kart()
 
 [comment]: <> (I'm also considering making an editor-focussed version of Uniton to facilitate world creation and asset management.)
 
-### Usage
-To launch and connect to a Uniton app do
-```python
-import uniton
-ue = uniton.UnityEngine(path='path/to/binary')
+
+### Installation
+Uniton requires Python 3.7+. We recommend the Anaconda/Miniconda distribution but it will work with others just as well. Install the Uniton Python package via `pip install uniton`. In case that doesn't work for you try
+```bash
+python3 -m pip install uniton --upgrade --user
 ```
 
+To use Uniton with your own Unity project, simply drop the – [__uniton.dll__](https://github.com/uniton-dev/uniton/releases/latest/download/uniton.dll) –  into your project's `Asset` folder.
+
+### Usage
 Uniton also comes with pre-built example environments that automatically download if they are instantiated. Below are two examples but there are more. Check out [uniton/examples](https://github.com/uniton-dev/uniton/tree/main/examples)!
 
 ```python
 # The kart game from the demo video
 ue = uniton.examples.KartGame()
 
-# A higher fidelity scene
+# A higher fidelity scene (700MB)
 ue = uniton.examples.Temple()
 ```
 
 
-#### To connect to a Unity editor or to a running standalone app do
+#### Uniton in your own Unity project
+Any Unity project can become a Uniton project simply by dropping the `uniton.dll` somewhere into the project's asset folder.
+Connect to your a running Unity app
+To launch and connect to a Uniton app do
+```python
+import uniton
+ue = uniton.UnityEngine(path='path/to/binary')
+```
+
 ```python
 ue = uniton.UnityEngine()
 
@@ -80,6 +91,7 @@ ue = uniton.UnityEngine(host='192.168.1.101', port=10001)
 # Warning: UNITONHOST="0.0.0.0" should only ever be used in a private and secure network!
 # It theoretically allows everyone on the network to control the host.
 ```
+
 
 #### Control time via
 ```python
@@ -154,6 +166,13 @@ Uniton creates placeholder objects for C# objects and functions. When a placehol
 - Python functions can't be registered as C# callbacks (please open an issue if this is important to you)
 - There is currently no documentation beyond this readme 
 
+
+### Uninstall
+To remove Uniton including all example binaries that have been loaded run
+```bash
+python -m uniton delete_data
+pip uninstall uniton
+```
 
 ### License
 Uniton is currently only partially open-source (https://pypi.org/project/uniton/). I might open-source all of it eventually. In the meantime, if you need access to the source code, please contact me at simonramstedt+uniton@gmail.com. Basic Uniton will always be free to use. 
