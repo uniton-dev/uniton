@@ -54,10 +54,7 @@ For more pre-built examples check [uniton/examples](https://github.com/uniton-de
 
 
 ### Installation
-Uniton requires Python 3.7+. We recommend the Anaconda/Miniconda distribution but it will work with others just as well. Install the Uniton Python package via `pip install uniton`. In case that doesn't work for you try
-```bash
-python3 -m pip install uniton --upgrade --user
-```
+Uniton requires Python 3.7+. We recommend the Anaconda/Miniconda distribution but it will work with others just as well. Install the Uniton Python package via `pip install uniton`.
 
 To use Uniton with your own Unity project, simply drop the – [__uniton.dll__](https://github.com/uniton-dev/uniton/releases/latest/download/uniton.dll) –  into your project's `Asset` folder.
 
@@ -167,6 +164,12 @@ Uniton creates placeholder objects for C# objects and functions. When a placehol
 - Python functions can't be registered as C# callbacks (please open an issue if this is important to you)
 - There is currently no documentation beyond this readme 
 
+
+### Troubleshooting
+In case that you aren't using Anaconda you might have to replace the `python` command with `python3` and the `pip` command with `python3 -m pip`. To maximize compatibilty you can install Uniton via
+```bash
+python3 -m pip install uniton --upgrade --user
+```
 
 ### Uninstall
 To remove Uniton including all example binaries that have been loaded run
