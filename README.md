@@ -19,10 +19,13 @@ pip install uniton
 ```
 ```python
 import uniton
-# launch game from the demo video
-ue = uniton.examples.Kart()
-# for more check the 'Usage' section
+# launch an example forest scene
+ue = uniton.examples.Forest()
 ```
+For more pre-built examples check [uniton/examples](https://github.com/uniton-dev/uniton/tree/main/examples)!
+
+![Examples](res/c.png)
+
 
 ### Features
 
@@ -59,13 +62,13 @@ python3 -m pip install uniton --upgrade --user
 To use Uniton with your own Unity project, simply drop the – [__uniton.dll__](https://github.com/uniton-dev/uniton/releases/latest/download/uniton.dll) –  into your project's `Asset` folder.
 
 ### Usage
-Uniton also comes with pre-built example environments that automatically download if they are instantiated. Below are two examples but there are more. Check out [uniton/examples](https://github.com/uniton-dev/uniton/tree/main/examples)!
+Uniton also comes with pre-built example environments that automatically download when they are first used. Below are two examples but there are more. Check out [uniton/examples](https://github.com/uniton-dev/uniton/tree/main/examples)!
 
 ```python
 # The kart game from the demo video
 ue = uniton.examples.KartGame()
 
-# A higher fidelity scene (700MB)
+# A higher fidelity scene
 ue = uniton.examples.Temple()
 ```
 
