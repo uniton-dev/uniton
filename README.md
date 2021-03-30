@@ -1,4 +1,4 @@
-# Uniton – Control Unity From Python
+# Uniton – Instrumentalize Unity with Python
 
 Uniton lets you control the Unity game engine from Python. It aims to instrumentalize Unity and make it more useful in non-game applications.
 
